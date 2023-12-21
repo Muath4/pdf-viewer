@@ -2155,6 +2155,8 @@
   --sidebar-transition-duration:200ms;
   --sidebar-transition-timing-function:ease;
 
+
+
   --toolbar-icon-opacity:0.7;
   --doorhanger-icon-opacity:0.9;
   --editor-toolbar-base-offset:105px;
@@ -2171,7 +2173,19 @@
 
   --sidebar-narrow-bg-color:rgb(212 212 215 / 0.9);
   --sidebar-toolbar-bg-color:rgb(245 246 247);
-  --toolbar-bg-color:rgb(249 249 250);
+    /* 
+  CUSTOM
+  START
+    --toolbar-bg-color:rgb(249 249 250);
+
+   */
+   --toolbar-bg-color:rgb(249 249 250);
+   /* --toolbar-bg-color:#517c6d;; */
+
+   /* 
+   END
+    */
+
   --toolbar-border-color:rgb(184 184 184);
   --toolbar-box-shadow:0 1px 0 var(--toolbar-border-color);
   --toolbar-border-bottom:none;
@@ -2501,6 +2515,17 @@ body{
   z-index:9999;
   cursor:default;
   font:message-box;
+
+  /* 
+  CUSTOM
+  START
+   */
+   border-radius: 0 0 10px 10px;
+   overflow: clip;
+
+   /* 
+   END
+    */
 }
 
 :is(.toolbar, .editorParamsToolbar, .findbar, #sidebarContainer)
@@ -3716,3 +3741,30 @@ dialog :link{
     display:none;
   }
 }
+
+
+/* 
+BELOW CUSTOM STYLES
+*/
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: var(--toolbar-bg-color) #ffffff00;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #ffffff00;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: var(--toolbar-bg-color);;
+    border-radius: 12px;
+    border: 0px none #000000;
+  }
