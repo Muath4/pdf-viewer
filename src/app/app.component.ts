@@ -18,7 +18,7 @@ export class AppComponent {
 
   pdfViewerUrl?: SafeResourceUrl;
 
-  pathToViewer4 = 'assets/pdfjs-4.0.269-dist/web/viewer.html';
+  pathToViewer4 = 'assets/generic/web/viewer.html';
 
   // pdfWorkerSourcePath = 'src/assets/pdfjs-3.11.174-dist/build/pdf.worker.*';
 
